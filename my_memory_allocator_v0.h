@@ -21,18 +21,12 @@ void init_mem_pool() {
   return;
 }
 
-// v1: malloc simply wraps mmap
+// v0: my_malloc simply wraps malloc
 void *my_malloc(size_t num_bytes) {
   return malloc(num_bytes);;
 }
 
-// v1: free routine could be no-op,
-// or could do an munmap
-// (dual of mmap, to release mapping back to OS)
-// The key challenge is that munmap
-// requires a `size` parameter, which we can't
-// get directly from the `free` context, so we
-// would need to store in runtime metadata, somewhere.
+// v0: free routine simply wraps free
 void my_free(void *ptr) {
   return free(ptr);;
 }
