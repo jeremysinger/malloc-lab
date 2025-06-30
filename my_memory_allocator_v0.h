@@ -23,12 +23,12 @@ void init_mem_pool() {
 
 // v0: my_malloc simply wraps malloc
 void *my_malloc(size_t num_bytes) {
-  return malloc(num_bytes);;
+  return malloc(num_bytes);
 }
 
 // v0: free routine simply wraps free
 void my_free(void *ptr) {
-  return free(ptr);;
+  return free(ptr);
 }
 
 
